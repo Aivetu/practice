@@ -22,9 +22,11 @@ public class ArrayExercise {
      * Initialize the array with 3,6,2,4,8
      * @return
      */
+
     private static int[] initializeArray(){
         //replace code below to initialize array here with value and return it
-        return null;
+        int[] intArray = {3,6,2,4,8};
+        return intArray ;
     }
 
     /**
@@ -32,6 +34,7 @@ public class ArrayExercise {
      */
     private static void displayArray(){
         //enter code here
+        System.out.println(initializeArray() + " , ");
     }
 
     /**
@@ -39,12 +42,24 @@ public class ArrayExercise {
      */
     private static void replace3rdItem(int newValue){
         //enter code here
+        intArray[2]= newValue;
+        for (int x=0;x<intArray.length;x++){
+            System.out.print(intArray[x] + " , ");
+        }
     }
+
+
+
+
 
     /**
      * Enter code to multiply all items in the array by the argument
      */
     private static void multiplyBy(int multiplier){
         //enter code here
+
+        for (int x=0;x<intArray.length;x++){
+            System.out.print(intArray[x] * multiplier + " , ");
+        }
     }
 }
