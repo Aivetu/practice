@@ -1,9 +1,12 @@
 package com.exercise.arrays;
 
+import com.sun.tools.javac.util.Assert;
+
 public class ArrayExercise {
 
     /**
      * complete all other methods, do not change anything in the main method, run your code
+     *
      * @param args main method argument
      */
     public static void main(String[] args) {
@@ -13,7 +16,7 @@ public class ArrayExercise {
         displayArray();//display - 3,6,5,4,8
         multiplyBy(2);
         displayArray();//display - 6,12,10,8,16
-        System.out.println("Array Sum -> "+sumArray());
+        System.out.println("Array Sum -> " + sumArray());
     }
 
 
@@ -21,19 +24,20 @@ public class ArrayExercise {
 
     /**
      * Initialize the array with 3,6,2,4,8
+     *
      * @return integer array
      */
-    private static int[] initializeArray(){
-        return new int[]{3,6,2,4,8};
+    private static int[] initializeArray() {
+        return new int[]{3, 6, 2, 4, 8};
     }
 
     /**
      * Code should display the numbers in the array seperated with comma e.g 3,6,2,4,8
      */
-    private static void displayArray(){
+    private static void displayArray() {
         StringBuilder s = new StringBuilder();
-        for(int i=0;i<intArray.length; i++){
-            if(i!=0){
+        for (int i = 0; i < intArray.length; i++) {
+            if (i != 0) {
                 s.append(",");
             }
             s.append(intArray[i]);
@@ -44,23 +48,27 @@ public class ArrayExercise {
     /**
      * Enter code to replace the item 3 with whatever is in the method argument
      */
-    private static void replace3rdItem(int newValue){
+    private static void replace3rdItem(int newValue) {
         intArray[2] = newValue;
     }
 
     /**
      * Enter code to multiply all items in the array by the argument
      */
-    private static void multiplyBy(int multiplier){
-        for(int i=0;i<intArray.length;i++){
-            intArray[i] = intArray[i]*multiplier;
+    private static void multiplyBy(int multiplier) {
+        for (int i = 0; i < intArray.length; i++) {
+            intArray[i] = intArray[i] * multiplier;
         }
     }
 
     /**
      * Return the sum of the numbers in the array
      */
-    private static int sumArray(){
-        return 0;//replace this with your solution
+    private static int sumArray() {
+        int sum = 0;
+        for(int i : intArray){
+            sum+=i;
+        }
+        return sum;
     }
 }
