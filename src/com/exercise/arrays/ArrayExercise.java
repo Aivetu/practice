@@ -4,7 +4,7 @@ public class ArrayExercise {
 
     /**
      * complete all other methods, do not change anything in the main method, run your code
-     * @param args
+     * @param args main method argument
      */
     public static void main(String[] args) {
         intArray = initializeArray();
@@ -20,31 +20,39 @@ public class ArrayExercise {
 
     /**
      * Initialize the array with 3,6,2,4,8
-     * @return
+     * @return integer array
      */
     private static int[] initializeArray(){
-        //replace code below to initialize array here with value and return it
-        return null;
+        return new int[]{3,6,2,4,8};
     }
 
     /**
      * Code should display the numbers in the array seperated with comma e.g 3,6,2,4,8
      */
     private static void displayArray(){
-        //enter code here
+        StringBuilder s = new StringBuilder();
+        for(int i=0;i<intArray.length; i++){
+            if(i!=0){
+                s.append(",");
+            }
+            s.append(intArray[i]);
+        }
+        System.out.println(s);
     }
 
     /**
      * Enter code to replace the item 3 with whatever is in the method argument
      */
     private static void replace3rdItem(int newValue){
-        //enter code here
+        intArray[2] = newValue;
     }
 
     /**
      * Enter code to multiply all items in the array by the argument
      */
     private static void multiplyBy(int multiplier){
-        //enter code here
+        for(int i=0;i<intArray.length;i++){
+            intArray[i] = intArray[i]*multiplier;
+        }
     }
 }
