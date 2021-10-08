@@ -26,8 +26,7 @@ public class ArrayExercise {
 
     private static int[] initializeArray(){
         //replace code below to initialize array here with value and return it
-        int[] intArray = {3,6,2,4,8};
-        return intArray ;
+        return new int[]{3,6,2,4,8};
     }
 
     /**
@@ -35,7 +34,19 @@ public class ArrayExercise {
      */
     private static void displayArray(){
         //enter code here
-        System.out.println(initializeArray() + " , ");
+        StringBuilder input= new StringBuilder();
+        for(int x=0;x<intArray.length;x++)
+        {
+            if (x != 0) {
+                input.append(",");
+            }
+            input.append(intArray[x]);
+
+        }
+        System.out.println(input);
+
+
+
     }
 
     /**
@@ -44,9 +55,6 @@ public class ArrayExercise {
     private static void replace3rdItem(int newValue){
         //enter code here
         intArray[2]= newValue;
-        for (int x=0;x<intArray.length;x++){
-            System.out.print(intArray[x] + " , ");
-        }
     }
 
 
@@ -60,7 +68,7 @@ public class ArrayExercise {
         //enter code here
 
         for (int x=0;x<intArray.length;x++){
-            System.out.print(intArray[x] * multiplier + " , ");
+            intArray[x] =intArray[x] * multiplier;
         }
     }
 
@@ -68,6 +76,11 @@ public class ArrayExercise {
      * Return the sum of the numbers in the array
      */
     private static int sumArray(){
-        return 0;//replace this with your solution
+        int result =0;
+        for (int arr:intArray){
+            result += arr;
+        }
+
+        return result;//replace this with your solution
     }
 }
