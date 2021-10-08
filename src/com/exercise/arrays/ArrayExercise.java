@@ -13,6 +13,7 @@ public class ArrayExercise {
         displayArray();//display - 3,6,5,4,8
         multiplyBy(2);
         displayArray();//display - 6,12,10,8,16
+        System.out.println("Array Sum -> "+sumArray());
     }
 
 
@@ -61,5 +62,12 @@ public class ArrayExercise {
         for (int x=0;x<intArray.length;x++){
             System.out.print(intArray[x] * multiplier + " , ");
         }
+    }
+
+    /**
+     * Return the sum of the numbers in the array
+     */
+    private static int sumArray(){
+        return 0;//replace this with your solution
     }
 }
