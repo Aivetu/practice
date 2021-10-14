@@ -20,4 +20,9 @@ public class Square extends Shape{
     public double area() {
         return this.length*length;
     }
+
+    @Override
+    public String name() {
+        return "Square";
+    }
 }

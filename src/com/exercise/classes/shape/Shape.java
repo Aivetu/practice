@@ -6,4 +6,8 @@ public abstract class Shape {
     public double area() {
         throw new NotImplementedException();
     }
+
+    public String name(){
+        return "Shape";
+    }
 }
